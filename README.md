@@ -79,9 +79,12 @@ We're conducting an A/B test to assess the efficacy of a vertical media rail com
 
 **Page Views:** This metric reflects overall traffic to the page, unaffected by the media rail orientation. It does not directly measure interaction with the media rail itself. Prioritizing user engagement metrics allows for insights into whether the vertical media format effectively captures user attention and drives further product exploration. Subsequent long-term A/B tests can assess the translation of engagement into increased sales.
 
-### Normality Assumption Check
+## Normality Assumption Check
 
-Many statistical tests assume normally distributed datasets. In the following section, we'll demonstrate common methods for checking this assumption in Python.
+Many statistical tests assume normally distributed datasets. In the following section, we'll explore common methods for checking this assumption in Python.
+
+1. **(Visual Method) Create a histogram**: (Visual Method) Create a histogram: If the histogram is roughly “bell-shaped”, then the data is assumed to be normally distributed.
+2. 
 
 **Results**: Insert the results obtained from the statistical tests, such as t-test statistics, p-values, means, and standard deviations, for each metric.
 
