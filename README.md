@@ -4,11 +4,11 @@
 
 ## A/B Testing Explanation
 
-### Introduction
+## Introduction
 
 A/B testing, also known as split testing, is a method used to compare two versions of a product or service to determine which one performs better. It is widely used in various fields, including marketing, web development, and user experience design, to make data-driven decisions and optimize outcomes.
 
-### The Case
+## The Case
 
 **Note**: The following case is fictive, and the data and visuals are borrowed from [GoodUI](https://goodui.org/patterns/126/tests/411/).
 
@@ -20,7 +20,7 @@ A/B testing, also known as split testing, is a method used to compare two versio
 
 ![Variant B](https://github.com/barisyukselcoding/Python-AB_Testing-Hyperisland/assets/135212402/3c13b7db-907e-4b3a-9a3e-d4a1cca138ca)
 
-### Dependencies
+## Dependencies
 
 A/B testing has the following dependencies:
 
@@ -33,7 +33,7 @@ A/B testing has the following dependencies:
 
 The provided Python script performs an A/B testing analysis on a dataset containing user metrics for two variants, A and B. It includes steps for data loading, visualization, normality assessment, and statistical testing.
 
-### Explanation of Steps
+## Explanation of Steps
 
 1. **Importing Libraries**: The script imports necessary libraries such as pandas for data manipulation, seaborn and matplotlib for visualization, and scipy for statistical testing.
    
@@ -47,13 +47,13 @@ The provided Python script performs an A/B testing analysis on a dataset contain
    
 6. **Statistical Testing**: A two-sample t-test is performed to compare means between variant A and variant B for each metric.
 
-### Interpretation of Results
+## Interpretation of Results
 
 - **Normality Assessment**: Skewness and kurtosis are used to assess the shape of distributions, while Shapiro-Wilk and Anderson-Darling tests are employed to evaluate normality statistically.
   
 - **Statistical Testing**: The t-test results provide insights into whether there are significant differences between variant A and variant B for each metric.
 
-### Findings and Conclusion
+## Findings and Conclusion
 
 ## Context
 
@@ -61,7 +61,7 @@ The provided Python script performs an A/B testing analysis on a dataset contain
 
 We're conducting an A/B test to assess the efficacy of a vertical media rail compared to a horizontal one on a cooking equipment website's product page. The primary metric selected for this analysis is Clicks on media, with Time on Page (sec) serving as the secondary metric among the available data points.
 
-## Justification for Primary and Secondary Metrics in A/B Test
+### Justification for Primary and Secondary Metrics in A/B Test
 
 **Primary Metric: Clicks on media**
 
@@ -73,18 +73,15 @@ We're conducting an A/B test to assess the efficacy of a vertical media rail com
 - **Engagement Signal:** Time spent on the page reflects overall user interest beyond initial interaction with the media, providing insight into user engagement with the content.
 - **Complement to Clicks on Media:** Time on page complements clicks on media by indicating how long users remain engaged with the content after interacting. Analyzing both metrics offers a comprehensive understanding, identifying scenarios where users might quickly leave the page despite initial engagement.
 
-## Why not GMV or Page Views?
+### Why not GMV or Page Views?
 
 **GMV (in $):** GMV serves as a valuable long-term metric but may not be suitable for observing short-term design differences. External factors can influence sales, making it less indicative of the immediate impact of design changes.
 
 **Page Views:** This metric reflects overall traffic to the page, unaffected by the media rail orientation. It does not directly measure interaction with the media rail itself. Prioritizing user engagement metrics allows for insights into whether the vertical media format effectively captures user attention and drives further product exploration. Subsequent long-term A/B tests can assess the translation of engagement into increased sales.
 
-## Normality Assumption Check
+### Normality Assumption Check
 
 Many statistical tests assume normally distributed datasets. In the following section, we'll demonstrate common methods for checking this assumption in Python.
-
-
-
 
 **Results**: Insert the results obtained from the statistical tests, such as t-test statistics, p-values, means, and standard deviations, for each metric.
 
