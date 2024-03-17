@@ -84,7 +84,32 @@ We're conducting an A/B test to assess the efficacy of a vertical media rail com
 Many statistical tests assume normally distributed datasets. In the following section, we'll explore common methods for checking this assumption in Python.
 
 1. **(Visual Method) Create a histogram**: (Visual Method) Create a histogram: If the histogram is roughly “bell-shaped”, then the data is assumed to be normally distributed.
-2. 
+
+ ```python
+   # Define the directory path
+   directory = '/Users/baris/Desktop/abtesting/'
+
+   # Create the directory if it doesn't exist
+   os.makedirs(directory, exist_ok=True) 
+
+   # Plotting the distributions
+   metrics = ["Clicks on media", "Time on Page (sec)"]
+   for metric in metrics:
+       plt.figure(figsize=(8, 6))  # Adjust figure size as needed
+       sns.histplot(x=metric, hue="Variant", data=data, multiple="dodge", stat="count")
+       plt.title(f"Distribution of {metric} by Variant")
+       plt.xlabel(metric)
+       plt.ylabel("Count")
+       plt.legend("AB")
+       plt.savefig(f'{directory}/Distribution_{metric}_by_variant.png')  # Save the plot with unique file name
+       plt.show()  # Display the plot
+````
+
+![Distribution of Clicks on media by Variant](https://github.com/barisyukselcoding/Python-AB_Testing-Hyperisland/blob/main/Distribution_Clicks%20on%20media_by_variant.png)
+
+![Distribution of Time on Page (sec) by Variant](https://github.com/barisyukselcoding/Python-AB_Testing-Hyperisland/blob/main/Distribution_Time%20on%20Page%20(sec)_by_variant.png)
+
+
 
 **Results**: Insert the results obtained from the statistical tests, such as t-test statistics, p-values, means, and standard deviations, for each metric.
 
